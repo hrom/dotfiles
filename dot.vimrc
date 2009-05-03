@@ -18,7 +18,6 @@ function SetVisualPreferences()
       set selectmode=mouse,key,cmd
       set keymodel=
   else
-
       set background=dark        " adapt colors for background
   endif
 endfunction
@@ -52,6 +51,7 @@ function SetSearchPreferences()
 endfunction
 
 function CloseAllCommentsFolds()
+  "by Andreas Politz
   set fdm=expr
   set fde=getline(v:lnum)=~'^\\s*#'?1:getline(prevnonblank(v:lnum))=~'^\\s*#'?1:getline(nextnonblank(v:lnum))=~'^\\s*#'?1:0
 endfunction
@@ -60,7 +60,6 @@ function SetBackupFolder()
   set backup
   set backupdir=$HOME/.vim/backup
 endfunction
-
 
 function InitializeRunningCommands()
   call SetVisualPreferences()

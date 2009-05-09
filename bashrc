@@ -390,5 +390,6 @@ mynara()
       echo "Usage: $0 {start|stop|restart}"
       exit 1
     ;;
-esac
+  esac
+}
 
